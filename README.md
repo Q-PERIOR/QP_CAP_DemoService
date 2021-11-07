@@ -19,6 +19,13 @@ File or Folder | Purpose
 - (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
 - Start adding content, for example, a [db/schema.cds](db/schema.cds).
 
+## Deployment to Cloud Foundry
+- Create a HANA instance in your trial account
+- Install service push: `cf install-plugin Create-Service-Push` 
+- Build the application using CDS: `cds build --production`
+- Deploy the application to cloud Foundry: `cf create-service-push`
+- This will create an HDI Container called mytimes-db as well as a service mytimes-srv
+- Access mytimes-srv from the BTP Cockpit
 
 ## Learn More
 
