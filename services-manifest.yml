@@ -3,6 +3,6 @@
 ---
 create-services:
 # ------------------------------------------------------------
-  - name:   mytimes-db
-    broker: hanatrial  # 'hanatrial' on trial landscapes
-    plan: "securestore"
+  - name: mytimes-db
+    broker: hana  # 'hanatrial' on trial landscapes
+    plan: "hdi-shared"

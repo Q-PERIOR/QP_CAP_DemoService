@@ -7,12 +7,13 @@
     "private": true,
     "dependencies": {
         "@sap/cds": "^5",
+        "@sap/hana-client": "^2.10.15",
         "express": "^4",
         "hdb": "^0.18.3"
     },
     "engines": {
-      "node": "16.11.1",
-      "npm": "6.14.14"
+        "node": "16.2.0",
+        "npm": "7.13.0"
     },
     "devDependencies": {
         "sqlite3": "^5.0.2"
@@ -48,7 +49,7 @@
     "cds": {
         "requires": {
             "db": {
-                "kind": "sql"
+                "kind": "hana"
             }
         },
         "hana": {
