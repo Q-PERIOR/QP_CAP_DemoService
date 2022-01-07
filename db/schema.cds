@@ -1,4 +1,4 @@
-namespace scp.cloud;
+namespace qpe.cloud;
 
 using {
     cuid,

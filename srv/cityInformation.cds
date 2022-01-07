@@ -1,5 +1,5 @@
-using scp.cloud from '../db/schema';
+using qpe.cloud from '../db/schema';
 
-service IncidentService {
+service CityService {
     entity Cities as projection on cloud.Cities;
 }

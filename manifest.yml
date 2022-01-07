@@ -18,7 +18,7 @@ applications:
 # -----------------------------------------------------------------------------------
 # HANA Database Content Deployer App
 # -----------------------------------------------------------------------------------
-- name: mytimes-db-deployer
+- name: mycity-db-deployer
   path: gen/db
   no-route: true
   health-check-type: process
@@ -26,4 +26,4 @@ applications:
   instances: 1
   buildpack: nodejs_buildpack
   services:
-  - mytimes-db
+  - mycity-db
