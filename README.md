@@ -44,8 +44,8 @@ Afterwards, follow these steps:
 - Install service push: `cf install-plugin Create-Service-Push` 
 - Build the application using CDS: `cds build --production`
 - Deploy the application to cloud Foundry: `cf create-service-push`
-- This will create an HDI Container called mytimes-db as well as a service mytimes-srv
-- Access mytimes-srv from the BTP Cockpit
+- This will create an HDI Container called mycity-db as well as a service mycity-srv
+- Access mycity-srv from the BTP Cockpit
 
 ## Local enhancement of the Demo Service
 This section explains how to customize the OData-Service to fit your requirement.
