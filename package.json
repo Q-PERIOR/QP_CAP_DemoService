@@ -13,7 +13,7 @@
         "hdb": "^0.18.3"
     },
     "engines": {
-        "node": "16.2.0",
+        "node": "^16",
         "npm": "7.13.0"
     },
     "devDependencies": {
@@ -53,6 +53,11 @@
         },
         "features": {
             "fiori_preview": true
+        },
+        "requires": {
+            "db" : {
+                "kind": "hana"
+            }
         }
     }
 }

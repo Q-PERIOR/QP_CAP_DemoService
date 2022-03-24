@@ -1,0 +1,16 @@
+### Get Cities
+
+GET http://localhost:4004/city/Cities
+
+
+### Post Cities
+
+POST http://localhost:4004/city/Cities HTTP/1.1
+content-type: application/json
+
+{
+"ID": "AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAd",
+"city": "Kiel",
+"inhabitants": 250000,
+"state": "Schleswig Holstein"
+}
