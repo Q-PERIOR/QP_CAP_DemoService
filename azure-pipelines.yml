@@ -17,6 +17,7 @@ steps:
 
 - script: |
     npm install -g mbt
+    npm install
   displayName: 'install dependencies'
 
 - script: |
