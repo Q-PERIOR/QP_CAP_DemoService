@@ -16,7 +16,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install mbt
+    npm install -g mbt
   displayName: 'install dependencies'
 
 - script: |
