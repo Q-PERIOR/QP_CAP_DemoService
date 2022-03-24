@@ -24,11 +24,19 @@ steps:
   displayName: 'Display files'
 
 - script: |
-    mbt build -p=cf -s=$(Agent.BuildDirectory)\s
+    pwd
+  displayName: 'Current folder'
+
+- script: |
+    mbt build -p=cf -t ./
   displayName: 'build mta'
+
+- script: |
+    ls
+  displayName: 'Display files'
 
 - task: PublishPipelineArtifact@1
   displayName: 'Publish Pipeline Artifact'
   inputs:
-    targetPath: '$(Agent.BuildDirectory)\s\mta_archives\demosrv_0.0.1.mtar'
+    targetPath: './demosrv_0.0.1.mtar'
     artifact: demosrv
