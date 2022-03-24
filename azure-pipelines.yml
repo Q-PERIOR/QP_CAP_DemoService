@@ -39,5 +39,5 @@ steps:
 - task: PublishPipelineArtifact@1
   displayName: 'Publish Pipeline Artifact'
   inputs:
-    targetPath: './demosrv_0.0.1.mtar'
+    targetPath: './mytimes_1.0.0.mtar'
     artifact: demosrv
