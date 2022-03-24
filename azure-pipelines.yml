@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- mta
+- main
 
 pool:
   vmImage: ubuntu-latest
@@ -18,6 +18,10 @@ steps:
 - script: |
     npm install -g mbt
   displayName: 'install dependencies'
+
+- script: |
+    ls
+  displayName: 'Display files'
 
 - script: |
     mbt build -p=cf -s=$(Agent.BuildDirectory)\s
