@@ -1,0 +1,30 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- mta
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install mbt
+  displayName: 'install dependencies'
+
+- script: |
+    mbt build -p=cf -s=$(Agent.BuildDirectory)\s
+  displayName: 'build mta'
+
+- task: PublishPipelineArtifact@1
+  displayName: 'Publish Pipeline Artifact'
+  inputs:
+    targetPath: '$(Agent.BuildDirectory)\s\mta_archives\demosrv_0.0.1.mtar'
+    artifact: demosrv
