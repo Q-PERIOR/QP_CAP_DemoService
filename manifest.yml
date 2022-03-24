@@ -4,26 +4,26 @@
 # multitenancy=false
 ---
 applications:
-# -----------------------------------------------------------------------------------
-# Backend Service
-# -----------------------------------------------------------------------------------
-- name: mytimes-srv
-  random-route: true  # for development only
-  path: gen/srv
-  memory: 256M
-  buildpack: nodejs_buildpack
-  services:
-  - mytimes-db
+  # -----------------------------------------------------------------------------------
+  # Backend Service
+  # -----------------------------------------------------------------------------------
+  - name: 2607-mytimes-srv
+    random-route: true # for development only
+    path: gen/srv
+    memory: 256M
+    buildpack: nodejs_buildpack
+    services:
+      - 2607-mytimes-db
 
-# -----------------------------------------------------------------------------------
-# HANA Database Content Deployer App
-# -----------------------------------------------------------------------------------
-- name: mycity-db-deployer
-  path: gen/db
-  no-route: true
-  health-check-type: process
-  memory: 256M
-  instances: 1
-  buildpack: nodejs_buildpack
-  services:
-  - mycity-db
+  # -----------------------------------------------------------------------------------
+  # HANA Database Content Deployer App
+  # -----------------------------------------------------------------------------------
+  - name: mycity-db-deployer
+    path: gen/db
+    no-route: true
+    health-check-type: process
+    memory: 256M
+    instances: 1
+    buildpack: nodejs_buildpack
+    services:
+      - mycity-db
